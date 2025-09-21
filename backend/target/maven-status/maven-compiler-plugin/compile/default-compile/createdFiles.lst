@@ -1,0 +1,7 @@
+com/youtube/transcript/dto/TranscriptResponse$TranscriptSegment.class
+com/youtube/transcript/YoutubeTranscriptGeneratorApplication.class
+com/youtube/transcript/dto/TranscriptRequest.class
+com/youtube/transcript/dto/TranscriptResponse$TranscriptMetadata.class
+com/youtube/transcript/dto/TranscriptResponse$VideoMetadata.class
+com/youtube/transcript/dto/ErrorResponse.class
+com/youtube/transcript/dto/TranscriptResponse.class
