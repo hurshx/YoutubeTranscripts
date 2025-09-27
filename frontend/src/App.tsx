@@ -2,7 +2,6 @@ import { useState } from 'react';
 import type { TranscriptResponse } from './types/api';
 import { ApiService } from './services/api';
 import HeroSection from './components/HeroSection';
-import InstructionsSection from './components/InstructionsSection';
 import ResultsSection from './components/ResultsSection';
 import LoadingSpinner from './components/LoadingSpinner';
 
@@ -27,9 +26,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <HeroSection onSubmit={handleSubmit} loading={loading} error={error} />
-      <InstructionsSection />
       {transcript && <ResultsSection transcript={transcript} />}
       {loading && <LoadingSpinner />}
     </div>
