@@ -89,6 +89,11 @@ public class YouTubeService {
     }
     
     private TranscriptResponse.VideoMetadata getVideoMetadata(String videoId) {
+        // Initialize default values outside try block
+        String title = "Unknown Title";
+        String channel = "Unknown Channel";
+        String duration = "Unknown Duration";
+        
         try {
             String videoUrl = "https://www.youtube.com/watch?v=" + videoId;
             Document doc = Jsoup.connect(videoUrl)
@@ -97,19 +102,28 @@ public class YouTubeService {
                 .get();
             
             // Extract title
-            String title = doc.select("meta[property=og:title]").attr("content");
-            if (title.isEmpty()) {
-                title = doc.title();
+            String extractedTitle = doc.select("meta[property=og:title]").attr("content");
+            if (!extractedTitle.isEmpty()) {
+                title = extractedTitle;
+            } else {
+                String docTitle = doc.title();
+                if (!docTitle.isEmpty()) {
+                    title = docTitle;
+                }
             }
             
             // Extract channel name
-            String channel = doc.select("meta[property=og:video:author]").attr("content");
-            if (channel.isEmpty()) {
-                channel = doc.select("link[itemprop=name]").attr("content");
+            String extractedChannel = doc.select("meta[property=og:video:author]").attr("content");
+            if (!extractedChannel.isEmpty()) {
+                channel = extractedChannel;
+            } else {
+                String linkChannel = doc.select("link[itemprop=name]").attr("content");
+                if (!linkChannel.isEmpty()) {
+                    channel = linkChannel;
+                }
             }
             
             // Extract duration (this is more complex and might not always work)
-            String duration = "Unknown Duration";
             try {
                 String scriptContent = doc.select("script")
                     .stream()
@@ -134,12 +148,11 @@ public class YouTubeService {
                 logger.warn("Could not extract duration: {}", e.getMessage());
             }
             
-            return new TranscriptResponse.VideoMetadata(videoId, title, channel, duration);
-            
         } catch (Exception e) {
             logger.warn("Could not fetch video metadata: {}", e.getMessage());
-            return new TranscriptResponse.VideoMetadata(videoId, title, channel, duration);
         }
+        
+        return new TranscriptResponse.VideoMetadata(videoId, title, channel, duration);
     }
     
     private String formatDuration(int seconds) {
