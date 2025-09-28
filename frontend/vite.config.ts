@@ -9,4 +9,14 @@ export default defineConfig({
     outDir: '../backend/src/main/resources/static',
     emptyOutDir: true,
   },
+  server: {
+    host: '0.0.0.0',
+    port: 5000,
+    strictPort: true,
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 5000,
+    strictPort: true,
+  },
 })
