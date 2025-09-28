@@ -32,6 +32,7 @@ sleep 5
 # Start frontend
 echo "🎨 Starting React frontend..."
 cd ../frontend
+npm install
 npm run dev &
 FRONTEND_PID=$!
 
