@@ -1,7 +1,7 @@
-/home/runner/workspace/backend/src/main/java/com/youtube/transcript/config/AppConfig.java
-/home/runner/workspace/backend/src/main/java/com/youtube/transcript/YoutubeTranscriptGeneratorApplication.java
-/home/runner/workspace/backend/src/main/java/com/youtube/transcript/controller/TranscriptController.java
-/home/runner/workspace/backend/src/main/java/com/youtube/transcript/dto/ErrorResponse.java
-/home/runner/workspace/backend/src/main/java/com/youtube/transcript/dto/TranscriptRequest.java
-/home/runner/workspace/backend/src/main/java/com/youtube/transcript/service/YouTubeService.java
-/home/runner/workspace/backend/src/main/java/com/youtube/transcript/dto/TranscriptResponse.java
+/Users/hursh/Documents/YoutubeTranscripts/backend/src/main/java/com/youtube/transcript/dto/TranscriptResponse.java
+/Users/hursh/Documents/YoutubeTranscripts/backend/src/main/java/com/youtube/transcript/dto/TranscriptRequest.java
+/Users/hursh/Documents/YoutubeTranscripts/backend/src/main/java/com/youtube/transcript/controller/TranscriptController.java
+/Users/hursh/Documents/YoutubeTranscripts/backend/src/main/java/com/youtube/transcript/config/AppConfig.java
+/Users/hursh/Documents/YoutubeTranscripts/backend/src/main/java/com/youtube/transcript/service/YouTubeService.java
+/Users/hursh/Documents/YoutubeTranscripts/backend/src/main/java/com/youtube/transcript/YoutubeTranscriptGeneratorApplication.java
+/Users/hursh/Documents/YoutubeTranscripts/backend/src/main/java/com/youtube/transcript/dto/ErrorResponse.java

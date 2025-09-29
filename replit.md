@@ -4,13 +4,13 @@
 A production-ready web application that extracts transcripts from YouTube videos. Built with React + TypeScript frontend and Spring Boot backend, designed for deployment as a single container.
 
 ## Current State
-- ✅ Frontend: React 19 + Vite + Tailwind CSS running on port 5000
+- ✅ Frontend: React 19 + Vite + Tailwind CSS running on port 5173
 - ✅ Backend: Spring Boot 3 + Java 17 configured for port 8080
 - ✅ CORS configured for cross-origin requests
 - ✅ Deployment configuration set up for production build
 
 ## Recent Changes (September 28, 2025)
-- Configured Vite to bind to 0.0.0.0:5000 for Replit proxy support
+- Configured Vite to bind to 0.0.0.0:5173 for Replit proxy support
 - Added CORS configuration to Spring Boot for API requests
 - Fixed Tailwind CSS compatibility issue (ring-opacity syntax)
 - Set up deployment configuration for autoscale deployment
@@ -29,7 +29,7 @@ A production-ready web application that extracts transcripts from YouTube videos
 - Production-ready configuration
 
 ## Development
-- Frontend development server: `npm run dev` (port 5000)
+- Frontend development server: `npm run dev` (port 5173)
 - Backend development: `./mvnw spring-boot:run` (port 8080)
 - Production build: Frontend → Backend static resources → Single JAR
 

@@ -13,7 +13,7 @@ A minimal, production-ready web app that extracts transcripts from YouTube video
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React 18 + TypeScript + Vite + Tailwind CSS
+- **Frontend**: React 19 + TypeScript + Vite + Tailwind CSS
 - **Backend**: Java 17 + Spring Boot 3 + Maven
 - **Deployment**: Docker (multi-stage build) + Fly.io
 - **Styling**: Tailwind CSS with custom dark theme

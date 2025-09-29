@@ -63,7 +63,7 @@ export default function HeroSection({ onSubmit, loading, error }: HeroSectionPro
                   type="url"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
-                  placeholder="Enter YouTube URL... https://www.youtube.com/watch?v=Mcm3CD..."
+                  placeholder="Enter YouTube URL... "
                   className="w-full px-6 py-4 bg-transparent border-2 border-purple-500/50 rounded-full text-white placeholder-gray-400 focus:border-purple-400 focus:outline-none transition-colors duration-200 text-center md:text-left"
                   disabled={loading}
                   aria-label="YouTube URL"
